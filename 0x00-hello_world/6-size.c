@@ -1,22 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - The parent function of the C program
  *
- * Return: Always 0 (Success)
+ * Return: Always void (Success)
  */
 
 int main(void)
-{	char a;
-	int b;
-	long int c;
-	long long int d;
+{
+	char ch;
+	int i;
+	long int li;
+	long long int lli;
 	float f;
 
-	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(a));
-	printf("size of an int: %lu byte(s)\n", (unsigned long)sizeof(b));
-	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(c));
-	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(d));
-	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));	
+	printf("Size of a char: %d byte(s)\n", sizeof(ch));
+	printf("Size of int: %d byte(s)\n", sizeof(i));
+	printf("Size of long int: %d byte(s)\n", sizeof(li));
+	printf("Size of long long int: %d byte(s)\n", sizeof(lli));
+	printf("Size of float: %d byte(s)\n", sizeof(f));
 	return (0);
+
+
 }
