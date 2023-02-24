@@ -8,7 +8,7 @@
 
 void print_most_numbers(void)
 {
-	int Bb;
+	char Bb;
 
 	for (Bb = 0; Bb <= 9; Bb++)
 	{
