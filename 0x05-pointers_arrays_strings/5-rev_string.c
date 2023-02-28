@@ -9,10 +9,11 @@
  */
 void rev_string(char *s)
 {
-	int i, j, l;
-	char c;
+	int i;
+	char c = s[0];
+	int j = 0;
 
-	for (i = 0, j = l - 1; i < j; i++, j--)
+	for (i = 0; i < j; i++, j--)
 	{
 		c = s[i];
 
