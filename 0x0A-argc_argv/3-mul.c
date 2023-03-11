@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -20,14 +20,14 @@ int main(int argc, char **argv)
 		printf("error\n");
 		return (1);
 	}
-	else
-	{	product = (num1 * num2);
+	
+		product = (num1 * num2);
 
-		num1 = _atoi(argv[1]);
-		num2 = _atoi(argv[2]);
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
 		printf("%d\n", product);
 
-	}
-	return (0);
+	
+		return (0);
 }
 
