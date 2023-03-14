@@ -26,16 +26,16 @@ int **alloc_grid(int width, int height)
 
 		if (alloc[a] == NULL)
 		{
-			for (b = 0; b < a; b++)
-				free(alloc[b]);
-
-		}
+			for (a--; a >= 0; a--)
+				free(alloc[a]);
 			free(alloc);
 			return (NULL);
-
+		}
+	}
+	for (a = 0; a < height; a++)
 		for (b = 0; b < width; b++)
 			alloc[a][b] = 0;
-	}
+
 	return (alloc);
 
 }
