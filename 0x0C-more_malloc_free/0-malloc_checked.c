@@ -3,7 +3,7 @@
 
 /**
  * malloc_checked - Allocates memory using malloc
- * @b: the value
+ * @b: Aloocated memory
  * Return: The pointer
  *
  */
@@ -12,7 +12,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *a;
 
-	a = (void *) malloc(b * sizeof(void));
+	a = malloc(b);
 
 	if (a == NULL)
 		exit(98);
