@@ -2,53 +2,54 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - Concatenates two strings and returns a pointer
- * to a newly allocated space in memory
+ * string_nconcat - Concatenates two strings and returns
+ * a pointer to a newly allocated memory
  * @s1: first character
- * @s2: second character
+ * @s2: Second character
  * @n: unsigned int
- * Return: Null if function fails
+ * Return: Null, if function fails
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int a, b, c;
-	char *ptr;
+	unsigned int len, len1, a;
+	char *result;
 
 	if (s1 == NULL)
 	{
-		a = 0;
-	}
-	else
-	{
-		for (a = 0; s1[a]; ++a)
-		;
+		s1 = "";
 	}
 	if (s2 == NULL)
-	{	
-		b = 0;
+	{
+		s2 = "";
 	}
-	else
-	{	
-		for (b = 0; s2[b]; ++b)
-			;
+
+	while (s1[len] != '\0')
+	{
+		len++;
 	}
-	if (b > n)
-		b = n;
+	while (s2[len1] != '\0')
+	{
+		len1++;
+	}
 
-	ptr = malloc((a + b + 1) * sizeof(char));
+	if (n >= len1)
+	{
+		n = len1;
+	}
 
-	if (ptr == NULL)
+	result = (char *) malloc((len + n + 1) * sizeof(char));
+
+	if (result == NULL)
+	{
 		return (NULL);
+	}
 
-	for (c = 0; c < a; c++)
-		ptr[c] = s1[c];
+	for (a = 0; a < n; a++)
+	{
+		result[len + 1] = s2[a];
+	}
 
-	for (c = 0; c < b; c++)
-		ptr[c + a] = s2[c];
-		ptr[a + b] = '\0';
-
-	return (ptr);
-
-
+	result[len + n] = '\0';
+	return (result);
 }
