@@ -1,7 +1,9 @@
-#ifndef _HEADER_
-#define _HEADER_
+#ifndef CALC_H
+#define CALC_H
 
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * struct op - Structure op
@@ -23,4 +25,4 @@ int op_mod(int a, int b);
 int (*get_op_func(char *s))(int, int);
 
 
-#endif
+#endif /** CALC_H */
