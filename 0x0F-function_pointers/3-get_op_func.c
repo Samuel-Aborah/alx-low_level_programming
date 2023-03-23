@@ -11,7 +11,6 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int a;
 	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
@@ -19,6 +18,8 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}};
+
+	int a;
 
 	for (a = 0; a < 5; a++)
 	{
