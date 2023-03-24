@@ -18,8 +18,7 @@ int (*get_op_func(char *s))(int, int)
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 
 	int a = 0;
 
@@ -27,7 +26,7 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (strcmp(s, ops[a].op) == 0)
 			return (ops[a].f);
-	
+
 		a++;
 	}
 	return (NULL);
