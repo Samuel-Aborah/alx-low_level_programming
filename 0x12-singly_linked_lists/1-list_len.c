@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * list_len - A function that returns the number of
