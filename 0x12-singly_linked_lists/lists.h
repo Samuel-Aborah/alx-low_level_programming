@@ -14,7 +14,7 @@ typedef struct node
 	char *str;
 	unsigned int len;
 	struct node *next;
-}list_t;
+} list_t;
 
 #include <stddef.h>
 
