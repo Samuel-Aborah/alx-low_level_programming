@@ -10,13 +10,17 @@ void free_listint2(listint_t **head)
 {
 	listint_t *ptr;
 
-	/** Frees the list */
-	while (*head != NULL)
+	/** Sets head to NULL */
+	if (head == NULL)
+		return;
+	/** Frees a list */
+	else
 	{
-		ptr = *head;
-		ptr = (*head)->next;
-		free(ptr);
+		while (*head != NULL)
+		{
+			ptr = *head;
+			*head = (*head)->next;
+			free(ptr);
+		}
 	}
-	/** Sets the head of the list to NULL */
-	*head = NULL;
 }

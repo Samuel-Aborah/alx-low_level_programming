@@ -11,7 +11,7 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *end, *tmp;
+	listint_t *end, *tmp = *head;
 
 	/** Allocate memory for the new node */
 	end = (listint_t *) malloc(sizeof(listint_t));
@@ -23,11 +23,13 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	end->n = n;
 	end->next = NULL;
 
-	tmp = *head;
 
 	/** If the list is empty, the new node is now head */
 	if (*head == NULL)
+	{
 		*head = end;
+		return (end);
+	}
 	else
 	{
 		while (tmp->next)
