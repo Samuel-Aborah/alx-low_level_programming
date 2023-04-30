@@ -11,11 +11,16 @@ size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
 
+	/* Traverse the list */
 	while (h != NULL)
-
+	{
+		/** Print the current node value */
 		printf("%d\n", h->n);
-		h = h->next;
+		/** Increment the number */
 		num++;
+		/** move the pointer to the next node */
+		h = h->next;
+
 	}
 	return (num);
 }
