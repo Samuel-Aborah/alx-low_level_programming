@@ -10,6 +10,10 @@ void free_listint2(listint_t **head)
 {
 	listint_t *end;
 
+	/* If function fails */
+	if (head == NULL)
+		return;
+
 	/* if head is not empty */
 	while (*head != NULL)
 	{
