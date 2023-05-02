@@ -15,26 +15,29 @@ size_t print_listint_safe(const listint_t *head)
 	size_t num = 0;
 
 	curr = head;
+	new = head->next;
 
-	/* If program fails */
-	if (head == NULL)
-		exit(98);
+	/* Using a loop where curr moves by 1 and new by 2 */
+	while (new != NULL && new < curr)
+	{
+		printf("[%p] %d\n", (void *)curr, curr->n);
+		curr = curr->next;
+		new = new->next;
 
-	/* Print list using loop */
-	while (curr != NULL)
+		if (new != NULL && new < curr)
+			new = new->next;
+		num++;
+	}
+
+	/* new reaches end of list, prints addr & value of last node to curr */
+	if (new != NULL)
 	{
 		printf("[%p] %d\n", (void *)curr, curr->n);
 		num++;
-
-		new = curr->next;
-
-		if (new <= curr)
-		{
-			printf("-> [%p] %d\n", (void *)new, new->n);
-			break;
-		}
-		new = curr;
 	}
-	/* Return number of nodes in the list */
+
+	if (!head)
+		exit(98);
+
 	return (num);
 }
