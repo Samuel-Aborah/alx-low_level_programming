@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_binary - A function that prints a binary 
+ * print_binary - A function that prints a binary
  * representation of a number
  * @n: The number to be represented
  */
@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 		move++;
 
 	/* Using move (shift) printn in binary from left to right */
-	while (move >= 0) 
+	while (move >= 0)
 	{
 		if ((n >> move) & 1)
 			_putchar ('1');
